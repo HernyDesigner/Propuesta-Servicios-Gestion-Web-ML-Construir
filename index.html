@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Propuesta y presupuesto · ML Construir · hernysgodoy.com</title>
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body class="bg-black">
+
+  <!-- NAVBAR FIXEADO (Inicialmente invisible con opacity-0 y -translate-y) -->
+  <nav id="main-nav"
+    class="fixed top-0 left-0 w-full z-50 px-6 py-4 transition-all duration-300  opacity-0 -translate-y-5 pointer-events-none">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+
+      <!-- LADO IZQUIERDO: LOGO SVG CUADRADO -->
+      <a href="#section-02" class="nav-link-item block w-[60px] h-[60px] relative group" aria-label="Volver al inicio">
+        <img src="img/H-isologo-bg.svg" alt="HernysGodoy Logo" class="w-full h-full object-contain rounded-xl">
+      </a>
+
+      <!-- LADO DERECHO: LINKS DESKTOP -->
+      <ul class="hidden md:flex gap-8 items-center">
+        <li><a href="#section-02"
+            class="nav-link text-white font-base text-sm tracking-widest hover:text-purple-600 hover:font-bold transition-colors relative pb-1 group">Inicio<span
+              class="absolute bottom-0 left-0 w-0 h-[1px] bg-purple-600 hover:font-bold transition-all duration-300 group-hover:w-full"></span></a>
+        </li>
+        <li><a href="#section-03"
+            class="nav-link text-white font-base text-sm tracking-widest hover:text-purple-600 hover:font-bold transition-colors relative pb-1 group">Propuesta<span
+              class="absolute bottom-0 left-0 w-0 h-[1px] bg-purple-600 hover:font-bold transition-all duration-300 group-hover:w-full"></span></a>
+        </li>
+        <li><a href="#section-07"
+            class="nav-link text-white font-base text-sm tracking-widest hover:text-purple-600 hover:font-bold transition-colors relative pb-1 group">Plan de trabajo<span
+              class="absolute bottom-0 left-0 w-0 h-[1px] bg-purple-600 hover:font-bold transition-all duration-300 group-hover:w-full"></span></a>
+        </li>
+        <li><a href="#section-08"
+            class="nav-link text-white font-bold text-sm tracking-widest bg-white/10 px-4 py-2 rounded-md hover:bg-purple-600 transition-all">Presupuestos</a>
+        </li>
+      </ul>
+
+      <!-- BOTÓN HAMBURGUESA (MÓVIL) -->
+      <button id="menu-toggle"
+        class="md:hidden text-white focus:outline-none pointer-events-auto relative w-10 h-10 flex justify-center items-center">
+        <div class="w-8 h-8 flex flex-col justify-center gap-1.5 items-end">
+          <span class="block w-8 h-0.5 bg-white transition-all duration-300 origin-center"></span>
+          <span class="block w-6 h-0.5 bg-white transition-all duration-300 origin-center"></span>
+        </div>
+      </button>
+
+    </div>
+  </nav>
+
+  <!-- BIG MENU MOBILE OVERLAY -->
+  <div id="mobile-menu-overlay"
+    class="fixed inset-0 bg-black z-40 flex flex-col justify-center items-center opacity-0 pointer-events-none">
+    <ul class="text-center space-y-8">
+      <li class="overflow-hidden"><a href="#section-02"
+          class="mobile-link block text-4xl text-gray-400 hover:text-white font-light tracking-tight translate-y-10 transition-transform duration-500">Inicio</a>
+      </li>
+      <li class="overflow-hidden"><a href="#section-03"
+          class="mobile-link block text-4xl text-gray-400 hover:text-white font-light tracking-tight translate-y-10 transition-transform duration-500 delay-75">Propuesta</a>
+      </li>
+      <li class="overflow-hidden"><a href="#section-07"
+          class="mobile-link block text-4xl text-gray-400 hover:text-white font-light tracking-tight translate-y-10 transition-transform duration-500 delay-150">Plan de trabajo</a>
+      </li>
+      <li class="overflow-hidden"><a href="#section-08"
+          class="mobile-link block text-4xl text-purple-400 hover:text-white font-bold tracking-tight translate-y-10 transition-transform duration-500 delay-200">Presupuestos</a>
+      </li>
+    </ul>
+  </div>
+
+  <main>
+
+    <section class="min-w-screen min-h-screen grid place-items-center text-center" id="section-01"
+      data-wave-opacity="0.4">
+      <span class="loader-text">CARGANDO 0%</span>
+      <div class="loader">
+        <div class="square">
+          <!-- Copia idéntica del SVG en cada cara -->
+          <div class="face front">
+
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+              y="0px" width="198.771px" height="198.441px" viewBox="0 0 198.771 198.441"
+              enable-background="new 0 0 198.771 198.441" xml:space="preserve">
+
+              <defs>
+                <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#fff" />
+                  <stop offset="100%" stop-color="#fff" />
+                </linearGradient>
+              </defs>
+
+
+              <path id="imagotipo" fill="url(#grad)" d="M135.237,185.808c-1.76,1.555-3.504,3.095-5.225,4.631h-8.028v-39.104c0-0.042-0.001-0.085-0.002-0.127
+    v-9.57c0-2.209-1.791-4-4-4H80.795c-2.209,0-4,1.791-4,4v31.496c-0.002,0.052-0.003,0.104-0.003,0.154v17.151H54.455
+    c-0.042,0-0.083,0.001-0.124,0.002H8.002V159.14c0.201-0.238,0.401-0.478,0.604-0.713c0.337-0.393,0.675-0.782,1.016-1.168
+    c0.357-0.404,0.718-0.805,1.078-1.201c0.345-0.381,0.691-0.759,1.04-1.132c0.361-0.388,0.725-0.77,1.089-1.148
+    c0.354-0.367,0.708-0.734,1.063-1.096c0.366-0.372,0.734-0.738,1.104-1.104c0.359-0.354,0.719-0.708,1.082-1.057
+    c0.371-0.357,0.746-0.709,1.121-1.061c0.365-0.342,0.73-0.683,1.1-1.018c0.377-0.344,0.758-0.683,1.139-1.02
+    c0.371-0.329,0.743-0.657,1.117-0.98c0.382-0.33,0.767-0.654,1.149-0.978c0.379-0.318,0.758-0.638,1.141-0.949
+    c0.385-0.315,0.771-0.625,1.159-0.936c0.387-0.309,0.771-0.616,1.16-0.919c0.39-0.303,0.781-0.6,1.172-0.896
+    c0.394-0.299,0.783-0.596,1.179-0.887c0.395-0.293,0.793-0.579,1.188-0.865c0.396-0.285,0.791-0.571,1.189-0.852
+    c0.399-0.282,0.803-0.559,1.205-0.834c0.4-0.274,0.801-0.551,1.203-0.821c0.405-0.271,0.813-0.536,1.222-0.804
+    c0.405-0.265,0.81-0.53,1.216-0.79c0.41-0.262,0.823-0.519,1.236-0.774c0.407-0.256,0.816-0.513,1.229-0.764
+    c0.416-0.252,0.833-0.5,1.25-0.748c0.414-0.246,0.826-0.493,1.241-0.734c0.421-0.245,0.845-0.484,1.268-0.727
+    c0.415-0.235,0.831-0.474,1.248-0.707c0.428-0.235,0.854-0.469,1.283-0.702c0.419-0.229,0.837-0.458,1.258-0.683
+    c0.434-0.229,0.869-0.457,1.305-0.684c0.42-0.22,0.838-0.439,1.26-0.655c0.44-0.227,0.885-0.446,1.328-0.669
+    c0.419-0.21,0.837-0.422,1.258-0.629c0.451-0.223,0.904-0.438,1.356-0.657c0.416-0.2,0.832-0.403,1.25-0.602
+    c0.457-0.217,0.916-0.429,1.375-0.643c0.421-0.194,0.839-0.391,1.261-0.583c0.465-0.213,0.932-0.421,1.397-0.631
+    c0.416-0.188,0.83-0.374,1.246-0.558c0.479-0.212,0.96-0.42,1.44-0.628c0.411-0.18,0.82-0.358,1.232-0.535
+    c0.488-0.209,0.979-0.415,1.47-0.621c0.405-0.171,0.811-0.343,1.217-0.514c0.506-0.21,1.016-0.418,1.522-0.626
+    c0.395-0.16,0.787-0.323,1.183-0.483c0.263-0.106,0.528-0.212,0.793-0.317H46.95c-0.074,0.036-0.148,0.072-0.223,0.108
+    c-0.4,0.196-0.802,0.396-1.201,0.595c-0.475,0.236-0.947,0.478-1.419,0.718c-0.397,0.202-0.796,0.406-1.192,0.612
+    c-0.479,0.248-0.954,0.5-1.43,0.752c-0.387,0.205-0.774,0.41-1.16,0.618c-0.496,0.268-0.99,0.542-1.484,0.814
+    c-0.36,0.199-0.725,0.397-1.086,0.602c-0.572,0.323-1.144,0.653-1.715,0.982c-0.277,0.161-0.556,0.317-0.832,0.48
+    c-0.833,0.488-1.662,0.986-2.488,1.492c-0.278,0.172-0.558,0.351-0.838,0.523c-0.557,0.347-1.112,0.692-1.666,1.047
+    c-0.34,0.219-0.678,0.442-1.016,0.663c-0.491,0.32-0.982,0.643-1.472,0.971c-0.356,0.238-0.711,0.482-1.065,0.726
+    c-0.466,0.319-0.931,0.639-1.394,0.964c-0.363,0.255-0.727,0.516-1.087,0.774c-0.453,0.325-0.906,0.654-1.357,0.985
+    c-0.359,0.267-0.718,0.532-1.075,0.802c-0.452,0.341-0.9,0.686-1.351,1.031c-0.352,0.271-0.701,0.545-1.051,0.819
+    c-0.455,0.36-0.908,0.728-1.359,1.095c-0.337,0.273-0.675,0.546-1.01,0.824c-0.475,0.395-0.943,0.796-1.414,1.198
+    c-0.308,0.263-0.615,0.521-0.92,0.788c-0.541,0.474-1.078,0.958-1.615,1.441c-0.229,0.208-0.459,0.409-0.688,0.619
+    c-0.758,0.697-1.512,1.406-2.26,2.13c-0.169,0.164-0.336,0.335-0.504,0.5c-0.525,0.515-1.051,1.027-1.569,1.556v-27.231H0.002
+    v70.589c0,4.672,3.089,7.812,7.688,7.812h46.766c0.041,0,0.083-0.001,0.125-0.002h26.213c2.209,0,4-1.791,4-4v-21
+    c0.002-0.051,0.003-0.104,0.003-0.153v-27.647h29.188v5.692c0,0.042,0.001,0.085,0.002,0.127v42.981c0,2.209,1.791,4,4,4h13.53
+    c0.009,0,0.017,0.002,0.024,0.002h59.229c4.786,0,8.001-4.039,8.001-7.812v-70.589h-12.613
+    C174.398,151.214,153.751,169.462,135.237,185.808z M190.77,190.441h-48.531c17.546-15.283,36.338-32.638,48.531-60.394V190.441z
+    M198.77,62.97V8.299c0-0.259-0.025-0.518-0.075-0.771C197.837,3.166,193.982,0,189.529,0h-13.716c-0.01,0-0.021,0.002-0.029,0.002
+    h-57.8c-2.209,0-4,1.791-4,4v28.689c0,0.008-0.002,0.015-0.002,0.021v20.09H84.795V41.509c0-0.009-0.003-0.018-0.003-0.025V19.551
+    c0.002-0.051,0.003-0.103,0.003-0.153V4c0-2.209-1.791-4-4-4H9.33C4.187,0,0.002,4.184,0.002,9.326v32.472
+    C0.001,41.84,0,41.882,0,41.924v31.592c0,0.009,0.002,0.019,0.002,0.026v0.188h10.242c0.109-0.083,0.219-0.167,0.328-0.248
+    c0.365-0.271,0.729-0.54,1.094-0.807c0.371-0.271,0.743-0.539,1.115-0.804c0.361-0.258,0.723-0.514,1.086-0.767
+    c0.378-0.265,0.756-0.522,1.135-0.78c0.359-0.244,0.717-0.487,1.076-0.727c0.387-0.259,0.773-0.511,1.161-0.762
+    c0.353-0.229,0.704-0.459,1.056-0.684c0.402-0.256,0.806-0.504,1.207-0.754c0.341-0.211,0.681-0.424,1.021-0.631
+    c0.432-0.263,0.862-0.517,1.296-0.771c0.313-0.186,0.625-0.374,0.938-0.556c0.728-0.421,1.453-0.833,2.183-1.236
+    c0.302-0.167,0.604-0.327,0.906-0.491c0.445-0.242,0.891-0.484,1.336-0.721c0.356-0.189,0.716-0.371,1.073-0.556
+    c0.393-0.203,0.783-0.407,1.177-0.604c0.372-0.188,0.745-0.371,1.119-0.555c0.377-0.187,0.754-0.372,1.133-0.554
+    c0.384-0.186,0.769-0.365,1.151-0.547c0.367-0.172,0.734-0.344,1.102-0.512c0.392-0.18,0.781-0.354,1.173-0.53
+    c0.36-0.16,0.722-0.32,1.082-0.479c0.397-0.174,0.796-0.347,1.193-0.516c0.354-0.151,0.706-0.301,1.061-0.447
+    c0.404-0.169,0.81-0.337,1.215-0.502c0.342-0.141,0.686-0.276,1.027-0.412c0.418-0.167,0.836-0.333,1.254-0.495
+    c0.321-0.126,0.646-0.248,0.969-0.37c0.436-0.166,0.871-0.332,1.308-0.494c0.29-0.106,0.581-0.211,0.871-0.315
+    c0.471-0.171,0.938-0.344,1.407-0.51c0.188-0.065,0.377-0.13,0.564-0.194c1.924-0.672,3.847-1.307,5.77-1.903
+    c0.086-0.027,0.172-0.055,0.259-0.082c0.573-0.177,1.146-0.35,1.721-0.521c0.176-0.054,0.352-0.106,0.526-0.159
+    c0.556-0.164,1.109-0.324,1.664-0.483c0.188-0.054,0.378-0.108,0.566-0.163c0.554-0.156,1.106-0.311,1.66-0.463
+    c0.187-0.052,0.373-0.104,0.561-0.153c0.563-0.152,1.123-0.304,1.684-0.451l0.511-0.136c0.583-0.151,1.166-0.303,1.748-0.45
+    c0.135-0.034,0.27-0.068,0.403-0.103c0.619-0.156,1.238-0.311,1.855-0.462c0.074-0.019,0.146-0.036,0.22-0.054
+    c3.55-0.865,7.083-1.654,10.594-2.396v10.382c-0.007,2.21,1.784,4.001,3.993,4.001h37.188c2.209,0,4-1.791,4-4V36.09
+    c0.37-0.063,0.749-0.13,1.116-0.189c0.155-0.025,0.311-0.051,0.465-0.076c1.403-0.229,2.794-0.451,4.157-0.668
+    c8.023-1.278,15.613-2.493,22.7-4.899c0.028-0.009,0.057-0.019,0.083-0.026c0.494-0.169,0.986-0.345,1.477-0.525
+    c0.065-0.023,0.132-0.048,0.198-0.073c0.46-0.171,0.918-0.35,1.372-0.531c0.092-0.037,0.183-0.073,0.273-0.11
+    c0.431-0.177,0.86-0.359,1.287-0.547c0.114-0.05,0.229-0.101,0.342-0.15c0.406-0.182,0.81-0.368,1.211-0.561
+    c0.133-0.063,0.267-0.128,0.398-0.192c0.384-0.188,0.766-0.381,1.145-0.578c0.148-0.077,0.295-0.154,0.441-0.232
+    c0.365-0.194,0.729-0.396,1.09-0.601c0.16-0.091,0.318-0.183,0.478-0.274c0.349-0.203,0.694-0.409,1.039-0.622
+    c0.169-0.105,0.338-0.212,0.506-0.319c0.334-0.212,0.667-0.428,0.997-0.648c0.177-0.118,0.352-0.239,0.525-0.36
+    c0.321-0.223,0.642-0.447,0.96-0.68c0.181-0.134,0.36-0.27,0.541-0.404c0.31-0.233,0.619-0.469,0.927-0.712
+    c0.187-0.147,0.369-0.299,0.555-0.45c0.3-0.245,0.599-0.491,0.896-0.747c0.188-0.161,0.374-0.328,0.561-0.493
+    c0.29-0.259,0.581-0.518,0.87-0.786c0.188-0.175,0.375-0.356,0.563-0.537c0.284-0.272,0.569-0.547,0.852-0.832
+    c0.187-0.187,0.369-0.381,0.554-0.572c0.28-0.291,0.562-0.582,0.84-0.885c0.182-0.198,0.36-0.405,0.543-0.608
+    c0.276-0.313,0.555-0.621,0.829-0.944c0.177-0.207,0.351-0.425,0.523-0.637c0.277-0.335,0.555-0.668,0.828-1.015
+    c0.165-0.211,0.328-0.433,0.494-0.646c0.279-0.365,0.56-0.729,0.836-1.106c0.148-0.203,0.295-0.416,0.441-0.623
+    c0.291-0.407,0.582-0.813,0.869-1.236c0.116-0.174,0.232-0.358,0.351-0.535c0.313-0.471,0.628-0.942,0.937-1.434
+    c0.005-0.005,0.007-0.01,0.011-0.015h11.468c0.533,0,1.035,0.35,1.24,0.828v3.965c-0.135,0.372-0.27,0.739-0.404,1.107
+    c-0.175,0.477-0.349,0.954-0.525,1.424c-0.179,0.476-0.359,0.942-0.542,1.412c-0.174,0.453-0.349,0.908-0.524,1.357
+    c-0.189,0.478-0.381,0.948-0.573,1.422c-0.173,0.426-0.345,0.854-0.52,1.276c-0.198,0.479-0.4,0.95-0.603,1.425
+    c-0.173,0.405-0.345,0.815-0.521,1.219c-0.206,0.475-0.416,0.94-0.625,1.41c-0.175,0.39-0.347,0.78-0.521,1.166
+    c-0.217,0.477-0.438,0.945-0.657,1.416c-0.171,0.364-0.34,0.731-0.513,1.094c-0.229,0.479-0.46,0.951-0.691,1.424
+    c-0.168,0.343-0.335,0.688-0.504,1.028c-0.239,0.479-0.481,0.949-0.725,1.423c-0.166,0.322-0.33,0.647-0.497,0.969
+    c-0.25,0.479-0.503,0.951-0.757,1.423c-0.162,0.304-0.324,0.608-0.487,0.908c-0.263,0.481-0.529,0.956-0.795,1.43
+    c-0.158,0.281-0.313,0.565-0.474,0.845c-0.273,0.479-0.549,0.949-0.826,1.421c-0.156,0.267-0.312,0.536-0.469,0.8
+    c-0.284,0.478-0.572,0.947-0.859,1.417c-0.151,0.247-0.302,0.497-0.455,0.742c-0.297,0.479-0.597,0.947-0.896,1.418
+    c-0.147,0.229-0.293,0.462-0.44,0.689c-0.311,0.478-0.623,0.945-0.936,1.414c-0.144,0.212-0.283,0.429-0.427,0.64
+    c-0.319,0.473-0.645,0.938-0.969,1.402c-0.139,0.199-0.276,0.401-0.416,0.601c-0.333,0.472-0.67,0.936-1.006,1.397
+    c-0.133,0.184-0.265,0.367-0.398,0.549c-0.346,0.471-0.694,0.934-1.045,1.395c-0.127,0.168-0.254,0.339-0.382,0.506
+    c-0.358,0.469-0.722,0.93-1.085,1.389c-0.121,0.153-0.24,0.309-0.361,0.46c-0.37,0.466-0.745,0.921-1.12,1.377
+    c-0.116,0.142-0.232,0.285-0.35,0.427c-0.382,0.459-0.768,0.911-1.153,1.36c-0.112,0.131-0.224,0.265-0.336,0.395
+    c-0.397,0.459-0.799,0.911-1.2,1.36c-0.103,0.114-0.203,0.23-0.307,0.345c-0.411,0.456-0.826,0.904-1.241,1.353
+    c-0.097,0.104-0.19,0.208-0.286,0.312c-0.425,0.45-0.851,0.896-1.277,1.337c-0.091,0.094-0.181,0.188-0.271,0.281
+    c-0.434,0.445-0.87,0.884-1.309,1.318c-0.087,0.086-0.172,0.174-0.259,0.259c-0.446,0.44-0.896,0.874-1.349,1.306
+    c-0.078,0.074-0.156,0.152-0.236,0.229c-0.463,0.44-0.931,0.873-1.396,1.302c-0.067,0.063-0.137,0.127-0.205,0.189
+    c-0.479,0.438-0.961,0.869-1.444,1.297c-0.06,0.052-0.116,0.104-0.176,0.156c-0.488,0.43-0.979,0.854-1.474,1.271
+    c-0.056,0.048-0.111,0.098-0.167,0.145c-0.508,0.431-1.019,0.854-1.532,1.273c-0.039,0.032-0.08,0.066-0.119,0.101
+    c-0.519,0.423-1.039,0.839-1.562,1.251c-0.038,0.03-0.075,0.062-0.114,0.092c-0.333,0.263-0.671,0.521-1.008,0.779h12.354
+    c0.046-0.041,0.092-0.082,0.138-0.123c0.891-0.807,1.773-1.63,2.65-2.472c0.162-0.155,0.324-0.313,0.486-0.47
+    c0.876-0.849,1.745-1.714,2.605-2.6c0.139-0.144,0.274-0.287,0.414-0.432c0.889-0.924,1.771-1.862,2.643-2.827
+    c0.063-0.069,0.125-0.142,0.188-0.212c0.867-0.965,1.727-1.949,2.575-2.957c0.078-0.093,0.157-0.183,0.234-0.274
+    c0.846-1.007,1.68-2.041,2.506-3.092c0.133-0.168,0.267-0.335,0.396-0.504c0.803-1.031,1.596-2.085,2.381-3.16
+    c0.139-0.189,0.276-0.382,0.416-0.573c0.785-1.089,1.563-2.198,2.33-3.333c0.111-0.166,0.223-0.335,0.335-0.502
+    c0.794-1.188,1.581-2.396,2.354-3.633c0.037-0.062,0.074-0.122,0.111-0.183c0.771-1.238,1.529-2.507,2.277-3.799
+    c0.069-0.121,0.143-0.24,0.213-0.361c0.733-1.275,1.455-2.581,2.166-3.909c0.11-0.208,0.224-0.414,0.334-0.623
+    c0.691-1.308,1.373-2.641,2.043-3.998c0.055-0.109,0.11-0.213,0.165-0.322v29.725c0,0.042,0.001,0.086,0.002,0.128v10.506h8.004
+    V63.098C198.771,63.056,198.771,63.012,198.77,62.97z M76.795,19.242c-0.002,0.051-0.003,0.103-0.003,0.154v18.849
+    c-5.365,1.117-10.791,2.329-16.25,3.741c-0.021,0.006-0.045,0.012-0.065,0.018c-3.258,0.845-6.523,1.76-9.797,2.771
+    c-0.07,0.021-0.14,0.043-0.209,0.063c-0.712,0.222-1.424,0.446-2.136,0.678c-0.162,0.052-0.324,0.104-0.485,0.157
+    c-0.627,0.205-1.256,0.413-1.884,0.625c-0.191,0.065-0.385,0.132-0.577,0.197c-0.606,0.207-1.214,0.419-1.82,0.635
+    c-0.197,0.069-0.395,0.14-0.59,0.209c-0.631,0.228-1.263,0.458-1.894,0.692c-0.162,0.061-0.324,0.12-0.485,0.181
+    c-0.774,0.291-1.55,0.588-2.322,0.894c-0.014,0.006-0.027,0.01-0.04,0.016c-0.818,0.322-1.637,0.652-2.454,0.991
+    c-0.047,0.019-0.092,0.039-0.139,0.058c-0.73,0.305-1.462,0.613-2.192,0.932c-0.212,0.092-0.425,0.187-0.637,0.279
+    c-0.567,0.249-1.134,0.5-1.699,0.759c-0.262,0.117-0.522,0.238-0.784,0.359c-0.521,0.24-1.043,0.483-1.563,0.731
+    c-0.278,0.133-0.557,0.266-0.834,0.399c-0.513,0.248-1.022,0.5-1.534,0.754c-0.275,0.14-0.552,0.275-0.828,0.415
+    c-0.532,0.271-1.064,0.548-1.597,0.825c-0.248,0.13-0.496,0.257-0.743,0.39c-0.644,0.342-1.285,0.689-1.928,1.045
+    c-0.134,0.073-0.269,0.145-0.401,0.22c-0.78,0.434-1.563,0.878-2.341,1.332c-0.168,0.099-0.338,0.201-0.507,0.301
+    c-0.602,0.354-1.202,0.711-1.803,1.077c-0.266,0.162-0.53,0.328-0.796,0.492c-0.505,0.313-1.011,0.628-1.515,0.949
+    c-0.295,0.188-0.589,0.379-0.883,0.568c-0.479,0.313-0.958,0.625-1.438,0.944c-0.299,0.199-0.597,0.399-0.896,0.603
+    c-0.482,0.327-0.964,0.66-1.445,0.996c-0.287,0.2-0.574,0.399-0.861,0.604C8.28,65.245,8.14,65.34,8,65.44V42.048
+    c0.001-0.042,0.002-0.084,0.002-0.126V9.326C8.002,8.607,8.61,8,9.33,8h67.465V19.242z M168.016,8.417
+    c-0.108,0.141-0.219,0.277-0.326,0.414c-0.27,0.338-0.539,0.668-0.813,0.992c-0.104,0.126-0.211,0.252-0.315,0.376
+    c-0.287,0.334-0.575,0.66-0.865,0.979c-0.091,0.102-0.182,0.203-0.272,0.303c-0.334,0.36-0.671,0.713-1.009,1.056
+    c-0.047,0.047-0.093,0.097-0.14,0.143c-1.197,1.201-2.423,2.287-3.679,3.272c-0.04,0.031-0.08,0.062-0.121,0.093
+    c-0.373,0.29-0.75,0.573-1.129,0.848c-0.063,0.045-0.125,0.089-0.188,0.134c-0.363,0.259-0.729,0.511-1.098,0.755
+    c-0.064,0.042-0.129,0.084-0.192,0.126c-0.378,0.247-0.759,0.486-1.143,0.719c-0.051,0.03-0.1,0.062-0.147,0.09
+    c-0.422,0.253-0.848,0.498-1.277,0.734c-0.006,0.004-0.013,0.008-0.02,0.012c-8.184,4.499-17.61,6.004-28.781,7.786
+    c-1.479,0.236-2.983,0.478-4.517,0.729V8.002h46.347C168.226,8.14,168.121,8.282,168.016,8.417z" />
+
+
+            </svg>
+          </div>
+
+          <!-- Las otras tres caras (mismo SVG) -->
+          <div class="face right">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+              y="0px" width="198.771px" height="198.441px" viewBox="0 0 198.771 198.441"
+              enable-background="new 0 0 198.771 198.441" xml:space="preserve">
+              <use xlink:href="#grad" />
+              <use xlink:href="#imagotipo" />
+            </svg>
+          </div>
+
+          <div class="face back">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+              y="0px" width="198.771px" height="198.441px" viewBox="0 0 198.771 198.441"
+              enable-background="new 0 0 198.771 198.441" xml:space="preserve">
+              <use xlink:href="#grad" />
+              <use xlink:href="#imagotipo" />
+            </svg>
+          </div>
+
+          <div class="face left">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+              y="0px" width="198.771px" height="198.441px" viewBox="0 0 198.771 198.441"
+              enable-background="new 0 0 198.771 198.441" xml:space="preserve">
+              <use xlink:href="#grad" />
+              <use xlink:href="#imagotipo" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="min-w-screen min-h-screen grid place-items-center text-center" id="section-02"
+      data-wave-opacity="0.7">
+      <div class="space-y-4 px-6">
+        <p class="text-zinc-300 text-xs uppercase tracking-[0.3em] mb-4">Propuesta comercial · ML Construir</p>
+        <h1 class="text-white text-2xl sm:text-4xl md:text-7xl font-light leading-tight tracking-tight">
+          Una tienda clara, actualizada y<br>alineada con su marca
+        </h1>
+        <p class="text-xl md:text-2xl text-royal-violet font-bold uppercase">Diseño comercial, organización del catálogo y gestión de la tienda online.</p>
+        <p class="text-zinc-300 text-sm font-light mt-2">Dos alternativas: puesta a punto inicial o implementación con acompañamiento mensual durante tres meses.</p>
+      </div>
+    </section>
+
+    <section class="min-w-screen min-h-screen grid place-items-center" id="section-03" data-wave-opacity="0.3">
+      <div class="max-w-4xl mx-auto w-full px-6 py-20">
+        <h2 class="text-gray-400 text-md uppercase tracking-wide mb-8 border-l-royal-violet border-l-4 pl-4">
+          1. Una tienda que acompañe el trabajo del equipo
+        </h2>
+        <!-- Bloque de cita estratégica -->
+        <div class="relative border border-zinc-800 rounded-2xl p-8 md:p-12 bg-zinc-900/30 mb-16">
+          <div class="absolute top-0 left-8 -translate-y-3">
+            <span class="text-purple-600 text-5xl font-serif leading-none select-none">&ldquo;</span>
+          </div>
+          <p class="text-gray-200 text-lg md:text-xl font-light leading-relaxed">
+            ML Construir ya cuenta con un equipo trabajando en comunicación, anuncios y Mercado Libre. Esta propuesta se concentra en fortalecer la tienda online: mejorar la presentación de los productos, ordenar la información y trasladar a la web la coherencia visual de la marca.<br><br>Podemos realizar una puesta a punto inicial o acompañarla con una gestión mensual para mantener la tienda actualizada y coordinada con las acciones comerciales del negocio.
+          </p>
+          <div class="mt-6 flex items-center gap-3">
+            <div class="w-8 h-px bg-purple-600"></div>
+            <span class="text-zinc-300 text-xs uppercase tracking-widest">Herny Godoy · Diseño &amp; Tecnología</span>
+          </div>
+        </div>
+
+        <!-- Nota destacada -->
+        <div class="flex items-start gap-3 bg-zinc-900/40 border border-zinc-700/50 rounded-xl px-6 py-4 mb-16 relative overflow-hidden">
+          <div class="absolute inset-0 bg-gradient-to-r from-purple-600/5 to-transparent pointer-events-none"></div>
+          <div class="flex-shrink-0 mt-0.5">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-purple-400" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+            </svg>
+          </div>
+          <div>
+            <p class="text-zinc-300 text-sm leading-relaxed">
+              La propuesta contempla un catálogo inicial de aproximadamente 20 productos y el trabajo sobre la tienda actual en Empretienda. Las secciones y componentes se evaluarán durante la implementación, según las posibilidades de la plataforma y las necesidades de ML Construir.
+            </p>
+          </div>
+        </div>
+
+        <!-- Pilares estratégicos -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="border border-zinc-800 rounded-xl p-6 bg-zinc-900/20 hover:border-purple-600/40 transition-colors">
+            <div class="text-purple-600 mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15M14.25 3.104c.251.023.501.05.75.082M19.8 15l-1.8 1.8M5 14.5l-1.8 1.8M5 14.5l1.8 1.8M19.8 15l1.8 1.8" />
+              </svg>
+            </div>
+            <h3 class="text-white font-semibold mb-2">Presentación comercial</h3>
+            <p class="text-zinc-400 text-sm leading-relaxed">Portada, banners y secciones que ayuden a descubrir los productos y comprender la propuesta del negocio.</p>
+          </div>
+          <div class="border border-zinc-800 rounded-xl p-6 bg-zinc-900/20 hover:border-purple-600/40 transition-colors">
+            <div class="text-purple-600 mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+              </svg>
+            </div>
+            <h3 class="text-white font-semibold mb-2">Catálogo e información</h3>
+            <p class="text-zinc-400 text-sm leading-relaxed">Productos mejor presentados, imágenes optimizadas y contenido institucional validado por ML Construir.</p>
+          </div>
+          <div class="border border-zinc-800 rounded-xl p-6 bg-zinc-900/20 hover:border-purple-600/40 transition-colors">
+            <div class="text-purple-600 mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5" />
+              </svg>
+            </div>
+            <h3 class="text-white font-semibold mb-2">Continuidad y coordinación</h3>
+            <p class="text-zinc-400 text-sm leading-relaxed">Una alternativa mensual para sostener la actualización de la tienda y acompañar las acciones de comunicación del equipo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="min-w-screen min-h-screen grid place-items-center" id="section-07" data-wave-opacity="0.3">
+      <div class="max-w-6xl mx-auto w-full px-6 py-20">
+        <h2 class="text-gray-400 text-md uppercase tracking-wide mb-8 border-l-royal-violet border-l-4 pl-4">
+          2. Cómo vamos a trabajar
+        </h2>
+        <ol class="text-gray-300 text-lg md:text-xl list-decimal pl-10 mb-8">
+          <li class="mb-4">Revisar la tienda, reunir accesos y materiales y seleccionar el catálogo inicial.</li>
+          <li class="mb-4">Organizar la navegación y definir los componentes comerciales adecuados.</li>
+          <li class="mb-4">Mejorar portada, banners, productos y contenido institucional.</li>
+          <li class="mb-4">Revisar el recorrido de compra y la visualización en computadora y celular.</li>
+          <li class="mb-4">Consolidar los ajustes y entregar la puesta a punto.</li>
+          <li class="mb-4">Si se elige la gestión mensual, continuar con actualizaciones, diseño comercial, coordinación y seguimiento.</li>
+        </ol>
+        <div class="bg-zinc-900/50 border border-zinc-700/50 rounded-xl p-6">
+          <p class="text-zinc-300 text-sm leading-relaxed">
+            <strong>Aclaración:</strong> Se evaluará la incorporación de testimonios, productos destacados, los más buscados y los demás componentes que Empretienda permita y resulten adecuados para el negocio. La selección se realizará durante la gestión e implementación de la web, considerando las funciones disponibles y el material aportado.
+          </p>
+        </div>
+      </div>
+    </section>
+
+        <section class="min-w-screen min-h-screen grid place-items-center relative" id="section-08" data-wave-opacity="0.2">
+      <div class="max-w-6xl mx-auto w-full px-6 py-20">
+
+        <!-- Título -->
+        <h2 class="text-gray-400 text-md uppercase tracking-wide mb-4 border-l-royal-violet border-l-4 pl-4">
+          3. Elegí la modalidad de trabajo
+        </h2>
+        <p class="text-gray-400 text-sm mb-12 pl-5">Seleccioná la alternativa que mejor se adapte a las necesidades de <strong
+            class="text-white">ML Construir</strong>. El valor y las condiciones se actualizan en tiempo real.</p>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+
+          <!-- COLUMNA IZQUIERDA: PACKS -->
+          <div class="space-y-5">
+
+            <form id="budget-form" class="space-y-5">
+
+              <!-- PACK 1: Puesta a punto de la tienda online -->
+              <label id="label-pack1"
+                class="olm-pack-label group flex flex-col p-6 rounded-2xl bg-zinc-900/50 border border-purple-500 cursor-pointer hover:border-purple-500/80 transition-all duration-300 relative mb-10">
+                <div class="flex items-start justify-between mb-3">
+                  <div class="flex items-center gap-4">
+                    <input type="radio" name="olm-pack" id="pack1" value="580000" data-pack="1" checked
+                      class="w-5 h-5 accent-purple-600 mt-0.5 flex-shrink-0">
+                    <div>
+                      <span class="text-white font-semibold text-base block">Puesta a punto de la tienda online</span>
+                      <span class="text-zinc-300 text-xs uppercase tracking-widest">Modalidad de pago único</span>
+                    </div>
+                  </div>
+                  <span class="text-purple-400 font-bold text-lg whitespace-nowrap">$580.000</span>
+                </div>
+                <p class="text-zinc-400 text-sm leading-relaxed pl-9 mb-3">
+                  Organización del catálogo y traslado de la coherencia visual de la marca a la tienda online. Tres semanas estimadas de trabajo.
+                </p>
+                <div class="ml-9 p-3 rounded-lg bg-zinc-950/60 border border-zinc-800/80 text-xs text-zinc-400">
+                  <span class="text-purple-400 font-medium">Nota:</span> Si durante el relevamiento o la carga se supera la complejidad o el volumen previsto, el presupuesto se incrementará de forma proporcional.
+                </div>
+              </label>
+
+              <!-- PACK 2: Puesta a punto + gestión y optimización mensual -->
+              <label id="label-pack2"
+                class="olm-pack-label group flex flex-col p-6 rounded-2xl bg-zinc-900/50 border border-zinc-800 cursor-pointer hover:border-purple-500 transition-all duration-300 relative">
+                <div class="absolute -top-3 left-6">
+                  <span
+                    class="bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">✦
+                    Recomendada para delegar</span>
+                </div>
+                <div class="flex items-start justify-between mb-3 mt-1">
+                  <div class="flex items-center gap-4">
+                    <input type="radio" name="olm-pack" id="pack2" value="1350000" data-pack="2"
+                      class="w-5 h-5 accent-purple-600 mt-0.5 flex-shrink-0">
+                    <div>
+                      <span class="text-white font-semibold text-base block">Puesta a punto + gestión y optimización mensual</span>
+                      <span class="text-zinc-300 text-xs uppercase tracking-widest">ARS 450.000 / mes (3 meses)</span>
+                    </div>
+                  </div>
+                  <span class="text-purple-400 font-bold text-lg whitespace-nowrap">$450.000 <span class="text-xs text-zinc-400 font-normal">/ mes</span></span>
+                </div>
+                <p class="text-zinc-400 text-sm leading-relaxed pl-9 mb-3">
+                  Mejorar la tienda y sostener su actualización, coordinando el trabajo web con la comunicación y las prioridades comerciales del equipo.
+                </p>
+                <div class="ml-9 flex items-center gap-2 text-xs text-green-400 font-medium mb-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Incluye la puesta a punto inicial. No se suman los ARS 580.000 del presupuesto 1.
+                </div>
+                <p class="text-zinc-300 text-xs leading-relaxed pl-9 italic">
+                  La continuidad después del tercer mes se acuerda expresamente.
+                </p>
+              </label>
+
+            </form>
+
+            <!-- Condiciones Comunes -->
+            <div class="text-zinc-400 text-sm space-y-3 mt-8 border-t border-zinc-800 pt-6 px-1">
+              <h4 class="text-zinc-300 font-semibold mb-3 text-sm uppercase tracking-wider">Condiciones Comunes</h4>
+              <ul class="list-disc pl-5 space-y-2 text-xs text-zinc-400 leading-relaxed">
+                <li>Ambas alternativas se desarrollan sobre Empretienda y dentro de las posibilidades de su plantilla y plan.</li>
+                <li>La selección inicial de productos, variantes y componentes se acuerda al iniciar.</li>
+                <li>La migración a Tiendanube, las integraciones y la sincronización automática de stock requieren evaluación y presupuesto adicionales.</li>
+                <li>ML Construir proporciona y valida precios, stock, fotografías, especificaciones, información institucional y testimonios.</li>
+                <li>La actualización de stock es manual, basada en la información recibida; no implica sincronización en tiempo real entre canales.</li>
+                <li>El servicio se concentra en la tienda y su diseño comercial. Los equipos actuales conservan sus funciones de redes sociales, anuncios y Mercado Libre.</li>
+                <li>No incluye atención al comprador, cobros, preparación de pedidos, envíos ni control del inventario físico.</li>
+                <li>Abonos de plataforma, dominio, aplicaciones y otros servicios externos se pagan por separado.</li>
+                <li>Las demoras en accesos, materiales o aprobaciones desplazan el cronograma.</li>
+                <li>No se garantizan ventas ni resultados comerciales específicos.</li>
+                <li>Propuesta válida durante quince días corridos desde su envío.</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <!-- COLUMNA DERECHA: RESUMEN -->
+          <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-2xl shadow-2xl sticky top-10">
+
+            <!-- Logo cliente + título -->
+            <div class="flex items-center gap-3 mb-6 pb-6 border-b border-zinc-800">
+              <div
+                class="w-8 h-8 rounded-lg bg-purple-600/20 border border-purple-600/40 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-purple-400" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                </svg>
+              </div>
+              <div>
+                <p class="text-white font-semibold text-sm">ML Construir</p>
+                <p class="text-zinc-300 text-xs">Resumen de propuesta · 2026</p>
+              </div>
+            </div>
+
+            <h3 class="text-white text-xl font-light mb-6">Detalle del presupuesto seleccionado</h3>
+
+            <!-- Cuadro de incluidos -->
+            <div id="pack-detail-box" class="overflow-hidden rounded-lg border border-zinc-800 mb-8">
+              <table class="w-full text-left text-sm">
+                <thead class="bg-black text-gray-400 uppercase tracking-widest text-xs">
+                  <tr>
+                    <th class="px-4 py-3 font-light">Componente</th>
+                    <th class="px-4 py-3 font-light text-right text-purple-400">Estado</th>
+                  </tr>
+                </thead>
+                <tbody id="comparison-table-body" class="divide-y divide-zinc-800 text-gray-300">
+                  <tr>
+                    <td class="px-4 py-4 italic text-zinc-300" colspan="2">Seleccioná un presupuesto para ver el detalle...
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Desglose Económico -->
+            <div class="space-y-3 mb-6 border-t border-zinc-800 pt-6">
+              <div class="flex justify-between text-zinc-400 text-sm" id="row-subtotal" style="display:none;">
+                <span>Presupuesto seleccionado</span>
+                <span id="val-subtotal">$0</span>
+              </div>
+            </div>
+
+            <!-- Total Final -->
+            <div class="flex justify-between items-end mb-2">
+              <span class="text-gray-400 text-sm uppercase tracking-widest">Inversión Total</span>
+              <span id="final-total" class="text-4xl md:text-5xl text-white font-bold tracking-tighter">$0</span>
+            </div>
+
+            <p class="text-right text-xs text-zinc-600 mb-6 uppercase">Valores expresados en ARS (Pesos Argentinos)</p>
+
+            <!-- Modalidades de Pago Dinámicas -->
+            <div id="payment-breakdown" class="hidden mb-8">
+              <div class="flex items-center gap-2 mb-3">
+                <div class="w-4 h-px bg-purple-500"></div>
+                <span class="text-zinc-400 text-xs uppercase tracking-widest">Modalidad de Pago</span>
+              </div>
+              <div id="payment-breakdown-content" class="rounded-xl overflow-hidden border border-zinc-800">
+                <!-- Se inyecta dinámicamente con JavaScript -->
+              </div>
+            </div>
+
+            <!-- Nota de Valor Dinámica -->
+            <div class="bg-zinc-800/50 border-l-2 border-purple-500 p-4 rounded-r-md">
+              <p id="value-note" class="text-zinc-300 text-sm italic leading-relaxed">
+                Seleccioná una alternativa para ver el análisis estratégico.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="min-w-screen min-h-screen grid place-items-center text-center relative pb-20" id="section-09"
+      data-wave-opacity="0.6">
+      <div class="max-w-5xl mx-auto w-full px-6 md:px-0 flex flex-col items-center justify-center">
+
+        <!-- Título -->
+        <h2 class="text-white text-4xl md:text-5xl font-light leading-tight tracking-tight mb-10">
+          El próximo paso: una tienda mejor presentada y un trabajo organizado
+        </h2>
+
+        <!-- Bloque de Texto -->
+        <div class="space-y-6 max-w-2xl mx-auto mb-16">
+          <p class="text-gray-300 text-lg md:text-xl font-light leading-relaxed">
+            Elegimos la modalidad de trabajo, confirmamos el catálogo inicial y reunimos los accesos y materiales. A partir de ahí, avanzamos con una implementación clara y responsabilidades acordadas con el equipo.
+          </p>
+        </div>
+
+        <!-- Botón CTA -->
+        <div class="flex-auto">
+          <div class="relative group">
+            <div class="relative w-80 h-14 opacity-90 overflow-hidden rounded-xl bg-black z-10">
+              <div
+                class="absolute z-10 -translate-x-96 group-hover:translate-x-[30rem] ease-in transistion-all duration-700 h-full w-80 bg-gradient-to-r from-gray-500 to-white/10 opacity-30 -skew-x-12">
+              </div>
+              <div
+                class="absolute flex items-center justify-center text-white z-[1] opacity-90 rounded-2xl inset-0.5 bg-black">
+                <a href="#"
+                  target="_blank" id="btn-wsp"
+                  class="input text-sm h-full opacity-90 w-full px-6 py-3 rounded-xl bg-black flex justify-center items-center">
+                  Conversar sobre esta propuesta</a>
+              </div>
+              <div
+                class="absolute duration-1000 group-hover:animate-spin w-full h-[100px] bg-gradient-to-r from-[#871DEE] to-indigo-500 blur-[30px]">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer simple -->
+        <p class="absolute bottom-8 text-zinc-600 text-xs uppercase tracking-widest">
+          Propuesta válida por quince días corridos desde su envío.
+        </p>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <style>
+    :root {
+      --wave-opacity: 0.3;
+      /* Default opacity */
+    }
+
+    a-waves {
+      position: fixed !important;
+      /* Force fixed */
+      z-index: -1 !important;
+      opacity: 1;
+      /* Persistent background */
+      visibility: visible;
+    }
+
+    /* Update the path stroke opacity based on the variable */
+    a-waves svg path {
+      stroke: rgba(51, 51, 51, var(--wave-opacity));
+      /* Fallback transition */
+    }
+
+    /* Initial state for Section 02 entrance */
+    #section-02 {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  </style>
+
+  <a-waves>
+    <svg class="js-svg"></svg>
+  </a-waves><!-- .a-waves -->
+
+
+  <script src="https://unpkg.com/lenis@1.3.11/dist/lenis.min.js"></script>
+  <script type="text/javascript"
+    src="https://codepen.io/wodniack/pen/YzmgGzP/b66656b6c21a73b4ca05fda86662cc3a.js"></script>
+  <!-- GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>   -->
+
+  <script type="text/javascript">
+    class AWaves extends HTMLElement {
+      /**
+      * Init
+      */
+      connectedCallback() {
+        // Elements
+        this.svg = this.querySelector('.js-svg')
+
+        // Properties
+        this.mouse = {
+          x: -10,
+          y: 0,
+          lx: 0,
+          ly: 0,
+          sx: 0,
+          sy: 0,
+          v: 0,
+          vs: 0,
+          a: 0,
+          set: false,
+        }
+
+        this.lines = []
+        this.paths = []
+        this.noise = new Noise(Math.random())
+
+        // Init
+        this.setSize()
+        this.setLines()
+
+        this.bindEvents()
+
+        // RAF
+        requestAnimationFrame(this.tick.bind(this))
+      }
+
+      /**
+      * Bind events
+      */
+      bindEvents() {
+        window.addEventListener('resize', this.onResize.bind(this))
+
+        window.addEventListener('mousemove', this.onMouseMove.bind(this))
+        this.addEventListener('touchmove', this.onTouchMove.bind(this))
+      }
+
+      /**
+      * Resize handler
+      */
+      onResize() {
+        this.setSize()
+        this.setLines()
+      }
+
+      /**
+      * Mouse handler
+      */
+      onMouseMove(e) {
+        this.updateMousePosition(e.pageX, e.pageY)
+      }
+
+      /**
+      * Touch handler
+      */
+      onTouchMove(e) {
+        e.preventDefault()
+
+        const touch = e.touches[0]
+        this.updateMousePosition(touch.clientX, touch.clientY)
+      }
+
+      /**
+      * Update mouse position
+      */
+      updateMousePosition(x, y) {
+        const { mouse } = this
+
+        mouse.x = x - this.bounding.left
+        mouse.y = y - this.bounding.top + window.scrollY
+
+        if (!mouse.set) {
+          mouse.sx = mouse.x
+          mouse.sy = mouse.y
+          mouse.lx = mouse.x
+          mouse.ly = mouse.y
+
+          mouse.set = true
+        }
+      }
+
+      /**
+      * Set size
+      */
+      setSize() {
+        this.bounding = this.getBoundingClientRect()
+
+        this.svg.style.width = `${this.bounding.width}px`
+        this.svg.style.height = `${this.bounding.height}px`
+      }
+
+      /**
+      * Set lines
+      */
+      setLines() {
+        const { width, height } = this.bounding
+
+        this.lines = []
+
+        this.paths.forEach((path) => {
+          path.remove()
+        })
+        this.paths = []
+
+        const xGap = 10
+        const yGap = 32
+
+        const oWidth = width + 200
+        const oHeight = height + 30
+
+        const totalLines = Math.ceil(oWidth / xGap)
+        const totalPoints = Math.ceil(oHeight / yGap)
+
+        const xStart = (width - xGap * totalLines) / 2
+        const yStart = (height - yGap * totalPoints) / 2
+
+        for (let i = 0; i <= totalLines; i++) {
+          const points = []
+
+          for (let j = 0; j <= totalPoints; j++) {
+            const point = {
+              x: xStart + xGap * i,
+              y: yStart + yGap * j,
+              wave: { x: 0, y: 0 },
+              cursor: { x: 0, y: 0, vx: 0, vy: 0 },
+            }
+
+            points.push(point)
+          }
+
+          // Create path
+          const path = document.createElementNS(
+            'http://www.w3.org/2000/svg',
+            'path'
+          )
+          path.classList.add('a__line')
+          path.classList.add('js-line')
+
+          this.svg.appendChild(path)
+          this.paths.push(path)
+
+          // Add points
+          this.lines.push(points)
+        }
+      }
+
+      /**
+      * Move points
+      */
+      movePoints(time) {
+        const { lines, mouse, noise } = this
+
+        lines.forEach((points) => {
+          points.forEach((p) => {
+            // Wave movement
+            const move =
+              noise.perlin2(
+                (p.x + time * 0.0125) * 0.002,
+                (p.y + time * 0.005) * 0.0015
+              ) * 12
+            p.wave.x = Math.cos(move) * 32
+            p.wave.y = Math.sin(move) * 16
+
+            // Mouse effect
+            const dx = p.x - mouse.sx
+            const dy = p.y - mouse.sy
+            const d = Math.hypot(dx, dy)
+            const l = Math.max(175, mouse.vs)
+
+            if (d < l) {
+              const s = 1 - d / l
+              const f = Math.cos(d * 0.001) * s
+
+              p.cursor.vx += Math.cos(mouse.a) * f * l * mouse.vs * 0.00065
+              p.cursor.vy += Math.sin(mouse.a) * f * l * mouse.vs * 0.00065
+            }
+
+            p.cursor.vx += (0 - p.cursor.x) * 0.005 // String tension
+            p.cursor.vy += (0 - p.cursor.y) * 0.005
+
+            p.cursor.vx *= 0.925 // Friction/duration
+            p.cursor.vy *= 0.925
+
+            p.cursor.x += p.cursor.vx * 2 // Strength
+            p.cursor.y += p.cursor.vy * 2
+
+            p.cursor.x = Math.min(100, Math.max(-100, p.cursor.x)) // Clamp movement
+            p.cursor.y = Math.min(100, Math.max(-100, p.cursor.y))
+          })
+        })
+      }
+
+      /**
+      * Get point coordinates with movement added
+      */
+      moved(point, withCursorForce = true) {
+        const coords = {
+          x: point.x + point.wave.x + (withCursorForce ? point.cursor.x : 0),
+          y: point.y + point.wave.y + (withCursorForce ? point.cursor.y : 0),
+        }
+
+        // Round to 2 decimals
+        coords.x = Math.round(coords.x * 10) / 10
+        coords.y = Math.round(coords.y * 10) / 10
+
+        return coords
+      }
+
+      /**
+      * Draw lines
+      */
+      drawLines() {
+        const { lines, moved, paths } = this
+
+        lines.forEach((points, lIndex) => {
+          let p1 = moved(points[0], false)
+
+          let d = `M ${p1.x} ${p1.y}`
+
+          points.forEach((p1, pIndex) => {
+            const isLast = pIndex === points.length - 1
+
+            p1 = moved(p1, !isLast)
+
+            const p2 = moved(
+              points[pIndex + 1] || points[points.length - 1],
+              !isLast
+            )
+
+            d += `L ${p1.x} ${p1.y}`
+          })
+
+
+          paths[lIndex].setAttribute('d', d)
+        })
+      }
+
+      /**
+      * Tick
+      */
+      tick(time) {
+        const { mouse } = this
+
+        // Smooth mouse movement
+        mouse.sx += (mouse.x - mouse.sx) * 0.1
+        mouse.sy += (mouse.y - mouse.sy) * 0.1
+
+        // Mouse velocity
+        const dx = mouse.x - mouse.lx
+        const dy = mouse.y - mouse.ly
+        const d = Math.hypot(dx, dy)
+
+        mouse.v = d
+        mouse.vs += (d - mouse.vs) * 0.1
+        mouse.vs = Math.min(100, mouse.vs)
+
+        // Mouse last position
+        mouse.lx = mouse.x
+        mouse.ly = mouse.y
+
+        // Mouse angle
+        mouse.a = Math.atan2(dy, dx)
+
+        // Animation
+        this.style.setProperty('--x', `${mouse.sx}px`)
+        this.style.setProperty('--y', `${mouse.sy}px`)
+
+        this.movePoints(time)
+        this.drawLines()
+
+        requestAnimationFrame(this.tick.bind(this))
+      }
+    }
+
+    customElements.define('a-waves', AWaves)
+
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+      // 0. SCROLL RESET & LOCK
+      history.scrollRestoration = 'manual';
+      window.scrollTo(0, 0);
+      document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden';
+
+      // Initialize Lenis
+      const lenis = new Lenis({
+        autoRaf: true,
+      });
+      lenis.stop(); // Lock lenis initially
+
+      // Listen for the scroll event and log the event data
+      lenis.on('scroll', (e) => {
+        // console.log(e);
+      });
+
+      // Elements
+      const loaderText = document.querySelector(".loader-text");
+      const loader = document.querySelector(".loader");
+      const wavesComponent = document.querySelector("a-waves");
+      const section02 = document.querySelector("#section-02");
+      const root = document.documentElement; // For CSS variable updates
+
+
+      // Progress object for GSAP
+      let progress = { value: 0 };
+
+      // 1. LOADER SEQUENCE
+      gsap.to(progress, {
+        value: 100,
+        duration: 0, // Simulate loading time
+        ease: "power1.inOut",
+        onUpdate: () => {
+          loaderText.textContent = `CARGANDO ${Math.ceil(progress.value)}%`;
+        },
+        onComplete: () => {
+          // Fade out loader & text
+          const tl = gsap.timeline();
+
+          tl.to([loaderText, loader], {
+            duration: 0.8,
+            ease: "power2.inOut",
+            opacity: 0,
+            onComplete: () => {
+              // Hide completely
+              loaderText.style.display = "none";
+              loader.style.display = "none";
+              document.querySelector("#section-01").style.display = "none"; // Hide section-01 entirely to free up space/scroll? 
+              // Or keep it but hidden. Let's just hide the loader elements as requested.
+            }
+          })
+
+            // Trigger Home Entrance (Section 02)
+            .to(section02, {
+              duration: 1,
+              opacity: 1,
+              y: 0, // Slide up to original position
+              ease: "power2.out"
+            }, "-=0.2") // Slight overlap
+
+            // AGREGAR ESTO AQUI: Animación de entrada del Navbar
+            .to("#main-nav", {
+              duration: 1,
+              opacity: 1,
+              y: 0,
+              autoAlpha: 1, // Maneja visibility automáticamente
+              ease: "power2.out",
+              onStart: () => {
+                document.querySelector("#main-nav").classList.remove("pointer-events-none");
+              }
+            }, "<+=0.5") // Entra medio segundo después de que arranca la sección
+
+            // Ensure waves are visible and persistent
+            .to(wavesComponent, {
+              duration: 1,
+              autoAlpha: 1, // Handles opacity + visibility
+              ease: "power1.inOut",
+              onComplete: () => {
+                // UNLOCK SCROLL
+                document.body.style.overflow = '';
+                document.documentElement.style.overflow = '';
+                lenis.start();
+              }
+            }, "<") // Start at same time as section entrance
+        }
+      });
+
+
+      // 2. OPACITY CONTROL SYSTEM
+      // Using IntersectionObserver as requested for performance
+
+      const sections = document.querySelectorAll("section[data-wave-opacity]");
+
+      const observerOptions = {
+        root: null, // viewport
+        threshold: 0.5, // 50% visibility triggers the change
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const targetOpacity = entry.target.dataset.waveOpacity;
+
+            // Animate the CSS variable for smooth transition
+            gsap.to(root, {
+              '--wave-opacity': targetOpacity,
+              duration: 0.5,
+              ease: "power1.inOut"
+            });
+
+            console.log(`Section ${entry.target.id} active. Wave opacity target: ${targetOpacity}`);
+          }
+        });
+      }, observerOptions);
+
+      sections.forEach(section => {
+        observer.observe(section);
+      });
+
+                  // ── ML CONSTRUIR: DATOS DE PACKS ──────────────────────────────────
+      const ML_PACKS = {
+        1: {
+          name: 'Puesta a punto de la tienda online',
+          value: 580000,
+          modalidad: 'pago único',
+          note: 'Tres semanas estimadas desde la recepción del anticipo, accesos y materiales completos. Soporte por 10 días hábiles posteriores a la entrega.',
+          items: [
+            'Evaluación de la tienda, navegación, categorías e información.',
+            'Diseño de portada y banners adaptados a computadora y celular.',
+            'Catálogo de aproximadamente 20 productos: títulos, descripciones, categorías, precios, stock y hasta 40 imágenes optimizadas.',
+            'Desarrollo de página "Quiénes somos" y contenido institucional.',
+            'Revisión de WhatsApp, enlaces, medios de pago, retiro y envío.',
+            'Comprobación del recorrido de compra con dos rondas de ajustes.',
+            'Secciones comerciales (Testimonios, Destacados, etc.) sujetas a evaluación.'
+          ]
+        },
+        2: {
+          name: 'Puesta a punto + gestión y optimización mensual',
+          value: 1350000, // Total por 3 meses (450k x 3)
+          mensualidad: 450000,
+          modalidad: 'ARS 450.000 por mes (3 meses)',
+          note: 'La continuidad después del tercer mes se acuerda expresamente.',
+          items: [
+            'Incluye todo el alcance de implementación de la opción 1.',
+            'Primer mes: Puesta a punto, 20 productos, diseño de portada/banners, componentes comerciales, contenido institucional.',
+            'Organización de fuente validada de precios/stock y circuito de cambios.',
+            'Segundo y tercer mes: Actualización del catálogo, hasta 2 nuevos diseños comerciales/mes, mejoras en hasta 5 fichas y 10 imágenes/mes.',
+            'Una mejora prioritaria mensual de presentación/navegación.',
+            'Actualización manual de precios/stock (lote semanal).',
+            'Reuniones frecuentes (30 min) y un informe mensual breve.'
+          ]
+        }
+      };
+
+      // Formateador de moneda ARS
+      const formatARS = new Intl.NumberFormat('es-AR', {
+        style: 'currency',
+        currency: 'ARS',
+        maximumFractionDigits: 0
+      });
+
+      // Elementos del DOM
+      const tableBody = document.getElementById('comparison-table-body');
+      const elSubtotal = document.getElementById('val-subtotal');
+      const elTotal = document.getElementById('final-total');
+      const elValueNote = document.getElementById('value-note');
+      const rowSubtotal = document.getElementById('row-subtotal');
+      const packRadios = document.querySelectorAll('input[name="olm-pack"]');
+      const packLabels = document.querySelectorAll('.olm-pack-label');
+      // Modalidades de pago
+      const paymentBreakdown = document.getElementById('payment-breakdown');
+      const paymentContent = document.getElementById('payment-breakdown-content');
+      const btnWsp = document.getElementById('btn-wsp');
+
+      // Notas de valor por pack
+      const VALUE_NOTES = {
+        0: 'Seleccioná un presupuesto para ver el análisis.',
+        1: '<strong>Mejora inicial:</strong> Organización del catálogo y traslado de la coherencia visual de la marca a la tienda online.',
+        2: '<strong>Mejora y sostenimiento:</strong> La tienda se mantiene actualizada y coordinada con las acciones de comunicación del equipo mensualmente.'
+      };
+
+      // LÓGICA PRINCIPAL
+      function calculateBudget() {
+        const selected = document.querySelector('input[name="olm-pack"]:checked');
+        const packNum = selected ? parseInt(selected.getAttribute('data-pack')) : 1;
+        const pack = ML_PACKS[packNum];
+
+        // 1. Resaltar label activo
+        packLabels.forEach(lbl => {
+          lbl.classList.remove('border-purple-500', 'bg-zinc-900/80');
+          lbl.classList.add('border-zinc-800');
+        });
+
+        if (selected) {
+          const activeLbl = selected.closest('.olm-pack-label');
+          activeLbl.classList.add('border-purple-500', 'bg-zinc-900/80');
+          activeLbl.classList.remove('border-zinc-800');
+        }
+
+        // 3. Tabla de detalle
+        tableBody.innerHTML = '';
+        if (!pack) {
+          tableBody.innerHTML = '<tr><td class="px-4 py-4 italic text-zinc-300" colspan="2">Seleccioná un presupuesto para ver el detalle...</td></tr>';
+        } else {
+          pack.items.forEach((item, i) => {
+            tableBody.innerHTML += `
+              <tr>
+                <td class="px-4 py-3 text-gray-300">${item}</td>
+                <td class="px-4 py-3 text-right">
+                  <span class="text-purple-400 text-xs">✓ Incluido</span>
+                </td>
+              </tr>`;
+          });
+          if (pack.note) {
+            tableBody.innerHTML += `
+              <tr>
+                <td colspan="2" class="px-4 py-3 text-zinc-300 text-xs italic border-t border-zinc-800/60">
+                  <span class="text-purple-400 mr-1">ℹ</span>${pack.note}
+                </td>
+              </tr>`;
+          }
+        }
+
+        // 4. Desglose económico
+        if (pack && rowSubtotal) {
+          rowSubtotal.style.display = 'none'; // not needed
+        }
+
+        // 5. Total final
+        elTotal.textContent = pack ? formatARS.format(packNum === 1 ? pack.value : pack.mensualidad) : '$0';
+        if(packNum === 2) {
+          elTotal.innerHTML = formatARS.format(pack.mensualidad) + ' <span class="text-xl text-zinc-400 font-normal">/ mes</span>';
+        }
+
+        // 6. Modalidades de pago dinámicas
+        if (pack && paymentBreakdown && paymentContent) {
+          paymentBreakdown.classList.remove('hidden');
+          if (packNum === 1) {
+            let half = Math.round(pack.value / 2);
+            paymentContent.innerHTML = `
+                <div class="flex items-center justify-between px-4 py-3 bg-zinc-900/80 border-b border-zinc-800">
+                  <div class="flex items-center gap-3">
+                    <div class="w-6 h-6 rounded-full bg-purple-600/20 border border-purple-600/50 flex items-center justify-center flex-shrink-0">
+                      <span class="text-purple-400 text-xs font-bold">1</span>
+                    </div>
+                    <div>
+                      <span class="text-zinc-300 text-xs font-medium block">Anticipo</span>
+                      <span class="text-zinc-600 text-xs">50% · Al confirmar el inicio</span>
+                    </div>
+                  </div>
+                  <span class="text-purple-300 font-semibold text-sm whitespace-nowrap">${formatARS.format(half)}</span>
+                </div>
+                <div class="flex items-center justify-between px-4 py-3 bg-zinc-900/60">
+                  <div class="flex items-center gap-3">
+                    <div class="w-6 h-6 rounded-full bg-green-600/10 border border-green-600/30 flex items-center justify-center flex-shrink-0">
+                      <span class="text-green-400 text-xs font-bold">2</span>
+                    </div>
+                    <div>
+                      <span class="text-zinc-300 text-xs font-medium block">Saldo contra entrega</span>
+                      <span class="text-zinc-600 text-xs">50% · Al recibir la tienda optimizada</span>
+                    </div>
+                  </div>
+                  <span class="text-green-300 font-semibold text-sm whitespace-nowrap">${formatARS.format(half)}</span>
+                </div>
+            `;
+            document.querySelector('#final-total').previousElementSibling.textContent = "Inversión Total";
+          } else {
+            paymentContent.innerHTML = `
+                <div class="flex items-center justify-between px-4 py-3 bg-zinc-900/80 border-b border-zinc-800">
+                  <div class="flex items-center gap-3">
+                    <div class="w-6 h-6 rounded-full bg-purple-600/20 border border-purple-600/50 flex items-center justify-center flex-shrink-0">
+                      <span class="text-purple-400 text-xs font-bold">1</span>
+                    </div>
+                    <div>
+                      <span class="text-zinc-300 text-xs font-medium block">Mes 1</span>
+                      <span class="text-zinc-600 text-xs">Puesta a punto e implementación</span>
+                    </div>
+                  </div>
+                  <span class="text-purple-300 font-semibold text-sm whitespace-nowrap">${formatARS.format(pack.mensualidad)}</span>
+                </div>
+                <div class="flex items-center justify-between px-4 py-3 bg-zinc-900/60 border-b border-zinc-800">
+                  <div class="flex items-center gap-3">
+                    <div class="w-6 h-6 rounded-full bg-purple-600/10 border border-purple-600/30 flex items-center justify-center flex-shrink-0">
+                      <span class="text-purple-400 text-xs font-bold">2</span>
+                    </div>
+                    <div>
+                      <span class="text-zinc-300 text-xs font-medium block">Mes 2</span>
+                      <span class="text-zinc-600 text-xs">Gestión y optimización</span>
+                    </div>
+                  </div>
+                  <span class="text-purple-300 font-semibold text-sm whitespace-nowrap">${formatARS.format(pack.mensualidad)}</span>
+                </div>
+                <div class="flex items-center justify-between px-4 py-3 bg-zinc-900/40">
+                  <div class="flex items-center gap-3">
+                    <div class="w-6 h-6 rounded-full bg-green-600/10 border border-green-600/30 flex items-center justify-center flex-shrink-0">
+                      <span class="text-green-400 text-xs font-bold">3</span>
+                    </div>
+                    <div>
+                      <span class="text-zinc-300 text-xs font-medium block">Mes 3</span>
+                      <span class="text-zinc-600 text-xs">Gestión y optimización</span>
+                    </div>
+                  </div>
+                  <span class="text-green-300 font-semibold text-sm whitespace-nowrap">${formatARS.format(pack.mensualidad)}</span>
+                </div>
+            `;
+            document.querySelector('#final-total').previousElementSibling.textContent = "Inversión por Mes";
+          }
+        }
+
+        // 7. Nota de valor
+        elValueNote.innerHTML = VALUE_NOTES[packNum] || VALUE_NOTES[0];
+        
+        // 8. Update Whatsapp link
+        if(btnWsp) {
+           let msg = `Hola Herny, estuve revisando la propuesta para ML Construir. Me interesa conversar sobre ${pack.name}, con una inversión de ${pack.modalidad === 'pago único' ? formatARS.format(pack.value) + ' ('+pack.modalidad+')' : pack.modalidad}.`;
+           btnWsp.href = "https://wa.me/5491162574737?text=" + encodeURIComponent(msg);
+        }
+        
+        // Update Local Storage
+        localStorage.setItem('ml_construir_pack', packNum);
+      }
+
+      // LISTENERS
+      packRadios.forEach(radio => radio.addEventListener('change', calculateBudget));
+
+      // Init
+      const savedPack = localStorage.getItem('ml_construir_pack');
+      if(savedPack && document.querySelector(`input[name="olm-pack"][data-pack="${savedPack}"]`)) {
+         document.querySelector(`input[name="olm-pack"][data-pack="${savedPack}"]`).checked = true;
+      }
+      calculateBudget();
+
+      // --- LOGICA NAVBAR & MENU MÓVIL ---
+
+      const navLinks = document.querySelectorAll(".nav-link, .nav-link-item");
+      const mobileLinks = document.querySelectorAll(".mobile-link");
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileOverlay = document.getElementById("mobile-menu-overlay");
+      let isMenuOpen = false;
+
+      // 1. Smooth Scroll con Lenis al hacer click
+      function handleScroll(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute("href");
+        const targetSection = document.querySelector(targetId);
+
+        if (targetSection) {
+          // Si es móvil, cerrar menú primero
+          if (isMenuOpen) toggleMenu();
+
+          lenis.scrollTo(targetSection, {
+            offset: 0,
+            duration: 1.5,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+          });
+        }
+      }
+
+      navLinks.forEach(link => link.addEventListener("click", handleScroll));
+      mobileLinks.forEach(link => link.addEventListener("click", handleScroll));
+
+      // 2. Mobile Menu Toggle Logic
+      function toggleMenu() {
+        isMenuOpen = !isMenuOpen;
+        const spans = menuToggle.querySelectorAll("span");
+
+        if (isMenuOpen) {
+          // --- ABRIR ---
+
+          // 1. Overlay: Usamos autoAlpha (opacity + visibility) y pointerEvents directos
+          gsap.to(mobileOverlay, {
+            autoAlpha: 1,
+            pointerEvents: "all", // Solución: Directo en el objeto, sin css:{}
+            duration: 0.5,
+            ease: "power2.out"
+          });
+
+          // 2. Animar Links
+          gsap.to(".mobile-link", {
+            y: 0,
+            duration: 0.6,
+            stagger: 0.1,
+            ease: "power2.out"
+          });
+
+          // Bloquear scroll
+          document.body.style.overflow = 'hidden';
+          if (typeof lenis !== 'undefined') lenis.stop();
+
+          // 3. Icono a Cruz
+          gsap.to(spans[0], { rotate: 45, y: 6, backgroundColor: "white", duration: 0.3 });
+          gsap.to(spans[1], { rotate: -45, y: -2, width: '2rem', backgroundColor: "white", duration: 0.3 });
+
+        } else {
+          // --- CERRAR ---
+
+          // 1. Ocultar Overlay
+          gsap.to(mobileOverlay, {
+            autoAlpha: 0,
+            pointerEvents: "none", // Solución: Directo en el objeto
+            duration: 0.5,
+            ease: "power2.in"
+          });
+
+          // Reset Links
+          gsap.to(".mobile-link", { y: 50, duration: 0.3 });
+
+          // Desbloquear scroll
+          document.body.style.overflow = '';
+          if (typeof lenis !== 'undefined') lenis.start();
+
+          // 2. Restaurar Icono Hamburguesa
+          gsap.to(spans[0], { rotate: 0, y: 0, duration: 0.3 });
+          gsap.to(spans[1], { rotate: 0, y: 0, width: '1.5rem', duration: 0.3 });
+        }
+      }
+
+      menuToggle.addEventListener("click", toggleMenu);
+
+      // 3. Active State en Scroll (Intersection Observer)
+      const observerNav = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Remover active de todos
+            navLinks.forEach(link => {
+              link.classList.remove("text-purple-400");
+              link.classList.add("text-white");
+              // Si es el botón de presupuesto, mantener estilo botón
+              if (link.getAttribute('href') === '#section-08') {
+                link.classList.remove("text-white");
+              }
+            });
+
+            // Agregar active al correspondiente
+            const activeLink = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
+            if (activeLink && activeLink.getAttribute('href') !== '#section-08') {
+              activeLink.classList.remove("text-white");
+              activeLink.classList.add("text-purple-600");
+            }
+          }
+        });
+      }, { threshold: 0.5 }); // 50% visible para activar
+
+      // Observar todas las secciones que tienen ID
+      document.querySelectorAll("section[id]").forEach(section => {
+        observerNav.observe(section);
+      });
+
+    });
+
+    // Optional: Keep tagline animation if needed, or remove if not requested.
+    // Assuming to keep it but commented out as it was before, or just remove for cleanliness if unwanted.
+    // Leaving it out based on "Only implement requested task" principle, users code had it commented out mainly.
+  </script>
+
+</body>
+
+</html>
